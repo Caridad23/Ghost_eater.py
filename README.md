@@ -1,0 +1,23 @@
+def eat_gohst(Power_Bead_Active, Touching_Ghost):
+    if Power_Bead_Active and Touching_Ghost:
+       return True
+    else: 
+        return False
+    
+def Score(Touching_Power_Bead, Touching_Dot): 
+    if Touching_Power_Bead and Touching_Dot:
+        return True
+    else:
+        return False   
+
+def lose(Power_Bead_Active, Touching_Ghost):
+    if  not Power_Bead_Active and Touching_Ghost:
+        return True
+    else:
+        return False
+
+def Win(Ate_All_Dots, Power_Bead_Active, Touching_Ghost):
+    if Ate_All_Dots and not lose(Power_Bead_Active, Touching_Ghost):
+        return True
+    else:
+        return False   
